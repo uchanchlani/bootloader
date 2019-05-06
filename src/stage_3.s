@@ -28,6 +28,7 @@ check_cpu:
 
 set_up_page_tables:
     # zero out buffer for page tables
+    out 0xf4, 0x0
     lea edi, [__page_table_start]
     lea ecx, [__page_table_end]
     sub ecx, edi
